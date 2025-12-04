@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Agrovet Pillao",
+    "supplies": ["Fertilizantes", "Semillas", "Herramientas"],
+    "hours": "Lun-Sab: 8am - 6pm",
+    "phone": "+51 955 444 333",
+    "address": "Av. Principal s/n, San Pablo de Pillao",
+    "image": "/images/supplier-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Semillas Andinas",
+    "supplies": ["Semillas certificadas de papa", "Abonos orgánicos"],
+    "hours": "Lun-Vie: 9am - 5pm",
+    "phone": "+51 955 444 332",
+    "address": "Jr. Comercio 234, Huánuco",
+    "image": "/images/supplier-2.jpg"
+  }
+]

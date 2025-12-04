@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Juan Pérez",
+    "community": "San Pablo de Pillao",
+    "products": ["Papa Amarilla", "Maíz Amiláceo"],
+    "volume": "5 toneladas/año",
+    "phone": "+51 987 654 321",
+    "image": "/images/producer-1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "María Rojas",
+    "community": "Cushipampa",
+    "products": ["Granadilla", "Aguaymanto"],
+    "volume": "2 toneladas/año",
+    "phone": "+51 987 654 322",
+    "image": "/images/producer-2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Cooperativa Agraria Pillao",
+    "community": "San Pablo de Pillao",
+    "products": ["Hortensias", "Papa Nativa"],
+    "volume": "10 toneladas/año",
+    "phone": "+51 987 654 323",
+    "image": "/images/producer-3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Pedro Castillo",
+    "community": "Chaclla",
+    "products": ["Truchas", "Hortalizas"],
+    "volume": "500 kg/mes",
+    "phone": "+51 987 654 324",
+    "image": "/images/producer-4.jpg"
+  }
+]

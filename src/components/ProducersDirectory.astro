@@ -1,0 +1,78 @@
+---
+import producers from '../data/producers.json';
+---
+
+<section id="productores" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-primary mb-4">Directorio de Productores</h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Conecta directamente con nuestros agricultores locales.
+      </p>
+    </div>
+
+    <!-- Filters -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button class="px-6 py-2 bg-primary text-white rounded-full hover:bg-primary-dark transition-colors shadow-md">
+        Todos
+      </button>
+      <button class="px-6 py-2 bg-white text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+        Papa Nativa
+      </button>
+      <button class="px-6 py-2 bg-white text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+        Frutas
+      </button>
+      <button class="px-6 py-2 bg-white text-gray-700 border border-gray-300 rounded-full hover:bg-gray-50 transition-colors">
+        Flores
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      {producers.map((producer) => (
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-xl transition-shadow">
+          <div class="h-48 bg-gray-200 relative">
+            <div class="absolute inset-0 flex items-center justify-center text-4xl bg-gray-100">
+              👨‍🌾
+            </div>
+            <!-- Image placeholder -->
+            <!-- <img src={producer.image} alt={producer.name} class="w-full h-full object-cover" /> -->
+          </div>
+          
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-gray-800 mb-1">{producer.name}</h3>
+            <p class="text-sm text-primary font-medium mb-4">📍 {producer.community}</p>
+            
+            <div class="space-y-3 mb-6">
+              <div>
+                <p class="text-xs text-gray-500 uppercase font-bold">Productos:</p>
+                <div class="flex flex-wrap gap-2 mt-1">
+                  {producer.products.map(prod => (
+                    <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-md font-medium">
+                      {prod}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <div>
+                <p class="text-xs text-gray-500 uppercase font-bold">Volumen:</p>
+                <p class="text-sm text-gray-700">{producer.volume}</p>
+              </div>
+            </div>
+            
+            <a 
+              href={`https://wa.me/${producer.phone.replace(/\D/g, '')}`} 
+              target="_blank"
+              class="w-full py-2 bg-green-500 text-white text-center rounded-lg font-bold hover:bg-green-600 transition-colors flex items-center justify-center gap-2"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.654-.698c.93.513 1.733.702 2.803.702 3.183 0 5.768-2.586 5.768-5.766.001-3.18-2.585-5.766-5.765-5.766zm.997 3.282c.17 0 .34.002.508.008.168.007.33.02.49.04.16.02.313.05.46.09.147.04.287.09.418.15.13.06.25.13.363.21.113.08.218.17.313.27.095.1.18.21.255.33.075.12.14.25.195.39.055.14.1.29.135.45.035.16.06.33.075.5.015.17.02.34.015.51-.005.17-.02.34-.045.5-.025.16-.06.32-.105.47-.045.15-.1.3-.165.44-.065.14-.14.27-.225.39-.085.12-.18.23-.285.33-.105.1-.22.19-.345.27-.125.08-.26.15-.4.21-.14.06-.29.11-.44.15-.15.04-.31.07-.47.09-.16.02-.33.03-.5.03-.17 0-.34-.01-.51-.03-.17-.02-.33-.05-.49-.09-.16-.04-.31-.09-.46-.15-.15-.06-.29-.13-.42-.21-.13-.08-.25-.17-.36-.27-.11-.1-.21-.21-.3-.33-.09-.12-.17-.25-.24-.39-.07-.14-.13-.29-.18-.44-.05-.15-.09-.31-.12-.47-.03-.16-.05-.33-.06-.5-.01-.17 0-.34.02-.51.02-.17.05-.33.09-.49.04-.16.09-.31.15-.46.06-.15.13-.29.21-.42.08-.13.17-.25.27-.36.1-.11.21-.21.33-.3.12-.09.25-.17.39-.24.14-.07.29-.13.44-.18.15-.05.31-.09.47-.12.16-.03.33-.05.5-.06.17-.01.34 0 .51.02z"/>
+              </svg>
+              Contactar
+            </a>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - San Pablo de Pillao Theme */
+  --color-primary: #2d7a3e;
+  --color-primary-dark: #1f5a2d;
+  --color-primary-light: #4a9d5f;
+  --color-secondary: #0077be;
+  --color-secondary-dark: #005a8f;
+  --color-accent: #8d6e63;
+  --color-accent-dark: #5d4037;
+
+  /* Fonts */
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Open Sans", sans-serif;
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  @apply text-gray-800 bg-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-primary);
+}

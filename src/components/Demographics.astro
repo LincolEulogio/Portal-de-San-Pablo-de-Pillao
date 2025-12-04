@@ -1,0 +1,112 @@
+---
+import demographics from "../data/demographics.json";
+---
+
+<section id="demografia" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-primary mb-4">
+        Características Demográficas
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Conoce los datos principales de nuestro distrito, su población y
+        geografía.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+      <!-- Population Card -->
+      <div
+        class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-primary"
+      >
+        <div class="flex items-center mb-4">
+          <span class="text-4xl mr-3">👥</span>
+          <h3 class="text-xl font-bold text-gray-800">Población</h3>
+        </div>
+        <p class="text-3xl font-bold text-primary mb-2">
+          {demographics.population.total.toLocaleString()}
+        </p>
+        <p class="text-gray-600">Habitantes aproximadamente</p>
+      </div>
+
+      <!-- Altitude Card -->
+      <div
+        class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-secondary"
+      >
+        <div class="flex items-center mb-4">
+          <span class="text-4xl mr-3">🏔️</span>
+          <h3 class="text-xl font-bold text-gray-800">Altitud</h3>
+        </div>
+        <p class="text-3xl font-bold text-secondary mb-2">
+          {demographics.geography.altitude}
+        </p>
+        <p class="text-gray-600">Metros sobre el nivel del mar</p>
+      </div>
+
+      <!-- Climate Card -->
+      <div
+        class="bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow border-l-4 border-accent"
+      >
+        <div class="flex items-center mb-4">
+          <span class="text-4xl mr-3">🌤️</span>
+          <h3 class="text-xl font-bold text-gray-800">Clima</h3>
+        </div>
+        <p class="text-lg font-medium text-accent mb-2">
+          {demographics.geography.climate}
+        </p>
+        <p class="text-gray-600">Ideal para la agricultura</p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Centers List -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div class="bg-primary p-4">
+          <h3 class="text-white font-bold text-lg">
+            Centros Poblados Principales
+          </h3>
+        </div>
+        <div class="p-6">
+          <ul class="divide-y divide-gray-200">
+            {
+              demographics.population.centers.map((center) => (
+                <li class="py-3 flex justify-between items-center">
+                  <span class="font-medium text-gray-800">{center.name}</span>
+                  <span class="bg-green-100 text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                    {center.population} hab.
+                  </span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+
+      <!-- Map Placeholder -->
+      <div
+        class="bg-gray-200 rounded-xl shadow-lg overflow-hidden min-h-[400px] relative group"
+      >
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62883.08866645362!2d-76.0025785!3d-9.7825785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91a7c2e2f2f2f2f2%3A0x2f2f2f2f2f2f2f2f!2sSan%20Pablo%20de%20Pillao!5e0!3m2!1ses!2spe!4v1620000000000!5m2!1ses!2spe"
+          width="100%"
+          height="100%"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          class="absolute inset-0 w-full h-full"></iframe>
+        <div
+          class="absolute bottom-4 right-4 bg-white px-4 py-2 rounded-lg shadow-md text-sm font-medium"
+        >
+          📍 Distrito San Pablo de Pillao
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 bg-green-50 rounded-xl p-8 border border-green-100">
+      <h3 class="text-2xl font-bold text-primary mb-4">Reseña Histórica</h3>
+      <p class="text-gray-700 leading-relaxed text-lg">
+        {demographics.history}
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,104 @@
+---
+
+---
+
+<nav class="bg-white shadow-md sticky top-0 z-50">
+  <div class="container mx-auto px-4">
+    <div class="flex justify-between items-center py-4">
+      <div class="flex items-center">
+        <!-- Logo Placeholder -->
+        <div
+          class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white font-bold mr-3"
+        >
+          SP
+        </div>
+        <div>
+          <h1 class="text-xl font-bold text-primary leading-none">
+            San Pablo de Pillao
+          </h1>
+          <p class="text-xs text-gray-500">Distrito Productivo y Turístico</p>
+        </div>
+      </div>
+
+      <button
+        id="navToggle"
+        class="lg:hidden text-gray-700 hover:text-primary focus:outline-none"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+      <div
+        id="navMenu"
+        class="hidden lg:flex lg:items-center lg:space-x-6 absolute lg:static top-full left-0 w-full lg:w-auto bg-white shadow-lg lg:shadow-none p-4 lg:p-0 flex-col lg:flex-row space-y-4 lg:space-y-0 border-t lg:border-none border-gray-100"
+      >
+        <a
+          href="#inicio"
+          class="text-gray-700 hover:text-primary font-medium transition-colors"
+          >Inicio</a
+        >
+        <a
+          href="#demografia"
+          class="text-gray-700 hover:text-primary font-medium transition-colors"
+          >Distrito</a
+        >
+        <a
+          href="#panoramicas"
+          class="text-gray-700 hover:text-primary font-medium transition-colors"
+          >Turismo</a
+        >
+        <a
+          href="#produccion"
+          class="text-gray-700 hover:text-primary font-medium transition-colors"
+          >Producción</a
+        >
+        <a
+          href="#productores"
+          class="text-gray-700 hover:text-primary font-medium transition-colors"
+          >Productores</a
+        >
+        <a
+          href="#mercados"
+          class="text-gray-700 hover:text-primary font-medium transition-colors"
+          >Mercados</a
+        >
+        <a
+          href="#contacto"
+          class="px-4 py-2 bg-primary text-white rounded-lg font-bold hover:bg-primary-dark transition-colors text-center"
+          >Contacto</a
+        >
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const navToggle = document.getElementById("navToggle");
+  const navMenu = document.getElementById("navMenu");
+
+  if (navToggle && navMenu) {
+    navToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("hidden");
+    });
+
+    // Close menu when clicking links on mobile
+    const links = navMenu.querySelectorAll("a");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth < 1024) {
+          navMenu.classList.add("hidden");
+        }
+      });
+    });
+  }
+</script>

@@ -1,0 +1,111 @@
+---
+const packages = [
+  { name: "PAL TOURS", subtitle: "Agencia de viajes y turismo" },
+  { name: "TOURS TINCCO", subtitle: "Tingo María" },
+  { name: "VIAJA Y EXPLORA", subtitle: "El Mundo" },
+  { name: "HIGHTOURS", subtitle: "Agencia de viajes" },
+  { name: "PLAY TOURS", subtitle: "Aventura y Misterio" },
+  { name: "VIAJEROS PERÚ", subtitle: "Agencia de viajes y turismo" },
+];
+---
+
+<section class="section" id="paquetes">
+  <div class="container">
+    <div class="section-header">
+      <h2>Paquetes Turísticos</h2>
+      <p>
+        ¡Prepárate para una aventura que despertará todos tus sentidos! Huánuco
+        y Tingo María, dos auténticas joyas escondidas en la vasta selva
+        peruana.
+      </p>
+    </div>
+
+    <div class="packages-grid">
+      {
+        packages.map((pkg) => (
+          <div class="package-card card">
+            <div class="package-image">
+              <img src="/images/tour-nature.jpg" alt={pkg.name} />
+            </div>
+            <div class="package-content">
+              <h3>{pkg.name}</h3>
+              <p>{pkg.subtitle}</p>
+              <a href="#" class="btn btn-primary">
+                Descargar
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--space-12);
+  }
+
+  .section-header h2 {
+    color: var(--color-primary);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-header p {
+    font-size: var(--text-lg);
+    color: var(--color-text-light);
+  }
+
+  .packages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-6);
+  }
+
+  .package-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .package-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .package-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+  }
+
+  .package-card:hover .package-image img {
+    transform: scale(1.1);
+  }
+
+  .package-content {
+    padding: var(--space-5);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .package-content h3 {
+    color: var(--color-primary);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-2);
+  }
+
+  .package-content p {
+    color: var(--color-text-light);
+    margin-bottom: var(--space-4);
+    flex: 1;
+  }
+
+  .package-content .btn {
+    align-self: flex-start;
+  }
+</style>

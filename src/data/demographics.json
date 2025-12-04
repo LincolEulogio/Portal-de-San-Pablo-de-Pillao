@@ -1,0 +1,19 @@
+{
+  "population": {
+    "total": 8500,
+    "centers": [
+      { "name": "San Pablo de Pillao", "population": 3200 },
+      { "name": "Chaclla", "population": 1500 },
+      { "name": "Cushipampa", "population": 900 },
+      { "name": "San Pedro de Pillao", "population": 850 },
+      { "name": "Tranca", "population": 600 }
+    ]
+  },
+  "geography": {
+    "altitude": "3,100 m.s.n.m.",
+    "climate": "Templado frío, con lluvias estacionales",
+    "location": "Provincia de Huánuco, Departamento de Huánuco",
+    "limits": "Norte: Chinchao, Sur: Panao, Este: Chaglla, Oeste: Amarilis"
+  },
+  "history": "El distrito de San Pablo de Pillao fue creado mediante Ley N° 30379 del 8 de diciembre de 2015, segregándose del distrito de Chinchao. Es una tierra de historia milenaria, conocida por la resistencia de los Panataguas y su riqueza agrícola."
+}

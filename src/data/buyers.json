@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Supermercados Metro",
+    "contact": "Jorge Luis",
+    "products": ["Papa Nativa", "Granadilla"],
+    "capacity": "20 toneladas/mes",
+    "phone": "+51 999 888 777",
+    "address": "Huánuco Centro"
+  },
+  {
+    "id": 2,
+    "name": "Mercado Mayorista de Santa Anita",
+    "contact": "Asociación de Comerciantes",
+    "products": ["Papa Blanca", "Maíz"],
+    "capacity": "50 toneladas/mes",
+    "phone": "+51 999 888 776",
+    "address": "Lima"
+  },
+  {
+    "id": 3,
+    "name": "Restaurante El Pillavino",
+    "contact": "Rosa Melchor",
+    "products": ["Truchas", "Hortalizas"],
+    "capacity": "100 kg/semana",
+    "phone": "+51 999 888 775",
+    "address": "San Pablo de Pillao"
+  }
+]

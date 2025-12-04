@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Mercado Central de Pillao",
+    "community": "San Pablo de Pillao",
+    "days": "Domingos",
+    "hours": "6:00 AM - 2:00 PM",
+    "products": ["Productos agrícolas", "Comidas típicas", "Artesanías"],
+    "capacity": "50 puestos",
+    "address": "Plaza de Armas",
+    "image": "/images/market-1.jpg",
+    "coordinates": { "lat": -9.785, "lng": -75.954 }
+  },
+  {
+    "id": 2,
+    "name": "Feria Agropecuaria Chaclla",
+    "community": "Chaclla",
+    "days": "Sábados",
+    "hours": "5:00 AM - 1:00 PM",
+    "products": ["Ganado", "Papa", "Quesos"],
+    "capacity": "30 puestos",
+    "address": "Campo Ferial",
+    "image": "/images/market-2.jpg",
+    "coordinates": { "lat": -9.812, "lng": -75.982 }
+  }
+]
