@@ -1,31 +1,39 @@
 ---
+import "../styles/global.css";
+
 interface Props {
   title: string;
   description?: string;
 }
 
-const { title, description = 'Visit Huanuco - Turismo, cultura y gastronomía en la región Huánuco' } = Astro.props;
+const {
+  title,
+  description = "Visit Huanuco - Turismo, cultura y gastronomía en la región Huánuco",
+} = Astro.props;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{title}</title>
-  <meta name="description" content={description}>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  
-  <!-- Global Styles -->
-  <link rel="stylesheet" href="/src/styles/global.css">
-</head>
-<body>
-  <slot />
-  
-  <script src="/src/scripts/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="/src/styles/global.css"> 
+  </head>
+  <body>
+    <slot />
+
+    <script src="../scripts/main.js"></script>
+  </body>
 </html>
