@@ -5,14 +5,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (navToggle && navMenu) {
     navToggle.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
+      navMenu.classList.toggle("hidden");
+      navMenu.classList.toggle("flex");
     });
 
     // Close menu when clicking on a link
     const navLinks = navMenu.querySelectorAll("a");
     navLinks.forEach((link) => {
       link.addEventListener("click", () => {
-        navMenu.classList.remove("active");
+        // Only close on mobile (when lg:hidden logic applies, but here we just check if it's not desktop)
+        if (window.innerWidth < 1024) {
+          navMenu.classList.add("hidden");
+          navMenu.classList.remove("flex");
+        }
       });
     });
   }
