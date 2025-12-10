@@ -3,17 +3,17 @@
     "total": 8500,
     "centers": [
       { "name": "San Pablo de Pillao", "population": 3200 },
-      { "name": "Chaclla", "population": 1500 },
-      { "name": "Cushipampa", "population": 900 },
-      { "name": "San Pedro de Pillao", "population": 850 },
-      { "name": "Tranca", "population": 600 }
+      { "name": "Esperanza", "population": 1500 },
+      { "name": "Cocha", "population": 900 },
+      { "name": "Minas", "population": 850 },
+      { "name": "Chacamarca", "population": 600 }
     ]
   },
   "geography": {
-    "altitude": "3,100 m.s.n.m.",
+    "altitude": "3,162 m.s.n.m.",
     "climate": "Templado frío, con lluvias estacionales",
     "location": "Provincia de Huánuco, Departamento de Huánuco",
     "limits": "Norte: Chinchao, Sur: Panao, Este: Chaglla, Oeste: Amarilis"
   },
-  "history": "El distrito de San Pablo de Pillao fue creado mediante Ley N° 30379 del 8 de diciembre de 2015, segregándose del distrito de Chinchao. Es una tierra de historia milenaria, conocida por la resistencia de los Panataguas y su riqueza agrícola."
+  "history": "El distrito de San Pablo de Pillao fue creado el 8 de diciembre de 2015 mediante la Ley Nº 30379, durante el gobierno de Ollanta Humala. En sus primeros años, la administración de recursos y servicios públicos estuvo a cargo de la Municipalidad Distrital de Chinchao, hasta la elección e instalación de sus propias autoridades. El 10 de diciembre de 2017 se realizaron las primeras elecciones municipales, resultando electo Noel Jhony Alminco Estela, quien gobernó hasta el 31 de diciembre de 2018; posteriormente, para el periodo 2019-2022, asumió como alcalde Julián Álvarez Lino, y para el periodo 2023-2026 fue elegida como alcaldesa Delia Verde Ponce. En la actual gestión municipal 2023-2026, la alcaldesa Delia Verde Ponce pertenece a la organización política Avanzada Regional Independiente Unidos por Huánuco, y el concejo municipal está conformado por la primera regidora Hermogenas Bernardo Domínguez, el segundo regidor Edguard Villanueva Malpartida, la tercera regidora Tania Marleny Javier Alminco, el cuarto regidor Ethel Rivera Espinoza —todos de la misma organización política— y la quinta regidora Rosario Del Pilar Lázaro Espinoza, del Movimiento Independiente Regional Huánuco Primero."
 }
